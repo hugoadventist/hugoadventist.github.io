@@ -4,8 +4,9 @@ const analytics = getAnalytics(app);
 
 function saveToFirebase(email) {
     var emailObject = {
-        email: email,
-        name: fname
+        name: fname,
+        email: email
+        
 
     };
 
