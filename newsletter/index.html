@@ -52,7 +52,9 @@
 
     function saveToFirebase(email) {
         var emailObject = {
-            email: email
+            email: email,
+            name: fname
+
         };
 
         firebase.database().ref('subscription-entries').push().set(emailObject)
