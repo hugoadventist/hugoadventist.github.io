@@ -17,7 +17,7 @@
             <!--<h2>Inscreva-se na minha Newsletter</h2>-->
             <img id="plane" src=paper-plane.svg alt="A paper plane">
             <p>Notícias de tecnologia toda semana nas manhãs de segunda para seu entretenimento e aprendizado.</p>
-            <form>
+            <form action="saveToFirebase.js">
                 <label for="fname">Seu nome:</label><br>
                 <input type="text" id="fname" name="fname"><br>
                 <label for="email">Seu melhor e-mail:</label><br>
@@ -46,27 +46,7 @@
         measurementId: "G-PX5WC7KZ4W"
     };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
-    function saveToFirebase(email) {
-        var emailObject = {
-            email: email,
-            name: fname
-
-        };
-
-        firebase.database().ref('subscription-entries').push().set(emailObject)
-            .then(function (snapshot) {
-                success(); // some success method
-            }, function (error) {
-                console.log('error' + error);
-                error(); // some error method
-            });
-    }
-
-    saveToFirebase(email);
+    
 </script>
 
 </html>
