@@ -18,5 +18,5 @@ function saveToFirebase(email) {
             error(); // some error method
         });
 }
-
+saveToFirebase(fname);
 saveToFirebase(email);
