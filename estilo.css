@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Lato:wght@400;700&family=Raleway:wght@600;700&display=swap');
+
+:root {
+  --background: #E5EAEF;
+  --primary: #4387d8;
+  --secondary: #315E93;
+  --tertiary: #FBFCFE;
+  --white: #FFFFFF;
+  --title: #102032;
+  --text: #97A3B0;
+  --container: 1216px;  
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  max-width: var(--container);
+  margin: 0 auto;
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul#redes a img:nth-child(2){
+  background-color: #102032;
+  width: auto;
+
+}
+header ul li:not(:first-child) {
+  margin-left: 24px;
+}
+
+nav ul a {
+  text-decoration: none;
+  display: block;
+
+}
+
+ul#links {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--title);
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+ul#links a:hover {
+  filter: opacity(0.8);
+}
+
+ul#redes img {
+  display: block;
+}
+
+section#inicio {
+  max-width: var(--container);
+  margin: 0 auto;
+
+  height: calc(100vh - (40px + 29px)); /* altura do header menos altura da tela */
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}
+
+section#inicio h1 {
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+section#inicio h1 span {
+  color: var(--primary);
+  display: block;
+}
+
+section#inicio img {
+  display: block;
+  object-fit: contain;
+  width: 439px;
+
+  -webkit-mask-image: linear-gradient(to left, black, transparent);
+  mask-image: linear-gradient(to left, black, transparent);
+  
+  position: relative;
+  right: 0;
+  z-index: -1;
+
+}
+
+section#formacao {
+  background-color: var(--tertiary);
+}
+
+section#formacao div#conteudo-formacao {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+div#conteudo-formacao h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 95px;
+}
+
+div#conteudo-formacao li.formacao-item {
+  display: flex;
+  font-family: Lato;
+}
+
+div#conteudo-formacao ul#lista-formacao {
+  flex-direction: column;
+  margin-top: 37px;
+}
+
+li.formacao-item:not(:first-child) {
+  margin-top: 45px;
+}
+
+li.formacao-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1.5rem;
+}
+
+
+li.formacao-item h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+li.formacao-item p.onde {
+  font-size: 1rem;
+  color: var(--title);
+
+}
+
+li.formacao-item p.quando {
+  font-size: .875rem;
+  color: var(--text);
+
+}
+
+div.imagens {
+  height: 5rem;
+  display: flex;
+}
+
+li.formacao-item img#logo-itec {
+  background-color: #4387d8;
+  height: 72px;
+
+}
+
+li.formacao-item img#logo-unopar {
+  background-color: var(--white);
+  height: 72px;
+}
+
+li.formacao-item img#logo-ufpa {
+  background-color: var(--white);
+  height: 72px;
+}
+
+section#habilidades {
+  background-color: var(--primary);
+
+}
+
+section#habilidades div#conteudo-habilidades {
+  margin: 0 auto;
+  display: flex;
+  max-width: var(--container);
+  padding: 154px 0;
+
+  align-items: center;
+}
+
+div#conteudo-habilidades h2 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 3rem;
+
+}
+
+div#conteudo-habilidades h2 span {
+  font-size: 1.5rem;
+  display: block;
+
+}
+
+div#conteudo-habilidades ul#tecnologias {
+  display: flex;
+  width: 100%;
+  margin-left: 49px; 
+
+}
+
+ul#tecnologias li.tecnologia {
+  background-color: var(--white);
+  margin-left: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  box-shadow: 0px 36px 28px -24px rgba(0,0,0,0.8);
+  
+
+
+}
+
+li.tecnologia p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4387d8;
+  font-weight: 600;
+  font-size: 1rem;
+  
+}
+
+li.tecnologia:not(:last-child){
+  margin-right: 24px;
+}
+
+section#publicacoes div#conteudo-publicacoes {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+article.publicacao img {
+  width: 50%;
+} 
+div#conteudo-publicacoes h2 {
+  color: var(--title);
+  font-size: 48px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div#conteudo-publicacoes h2 span {
+  font-size: 24px;
+}
+
+div#conteudo-publicacoes article.publicacao:not(:first-child) {
+  margin-top: 24px;
+
+}
+
+div#conteudo-publicacoes article.publicacao:nth-child(2) {
+  margin-top: 60px;
+}
+
+div#conteudo-publicacoes article.publicacao {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 24px 24px;
+  box-shadow: 0px 28px 28px -36px rgba(0,0,0,0.8);
+}
+
+article.publicacao div {
+  margin-left: 24px;
+}
+
+article.publicacao div h3 {
+  font-size: 24px;
+  color: var(--title);
+}
+
+article.publicacao div p {
+  font-family: Lato;
+  font-size: 16px;
+  color:var(--text);
+
+  margin-top: 16px;
+}
+
+footer {
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+footer div#conteudo-footer {
+  max-width: var(--container);
+  margin: 0 auto;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+div#conteudo-footer div#titulo-footer {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#titulo-footer h2 {
+  font-size: 48px;
+}
+
+div#conteudo-footer form {
+  max-width: 592px;
+  margin-top: 40px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+div#conteudo-footer form input{
+  font-family: Lato;
+  height: 67px;
+  border-radius: 4px;
+  border: 0;
+
+}
+
+div#conteudo-footer form textarea {
+  font-family: Lato;
+  border-radius: 4px;
+  border: 0;
+
+  resize: none;
+
+}
+
+div#conteudo-footer form text::placeholder, textarea::placeholder {
+  color: var(--text);
+
+}
+
+div#conteudo-footer form input, textarea {
+  color: var(--title);
+}
+
+div#conteudo-footer input:not([type="submit"]) {
+  padding: 0 24px;
+}
+
+div#conteudo-footer input + input {
+  margin-top: 16px;
+
+}
+
+div#conteudo-footer textarea {
+  margin-top: 16px;
+  padding: 24px;
+}
+div#conteudo-footer input[type="submit"] {
+  margin-top: 24px;
+  background-color: var(--secondary);
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 700;
+  
+  transition: 0.2s;
+}
+
+div#conteudo-footer input[type="submit"]:hover {
+
+  filter:brightness(0.8);
+
+}
